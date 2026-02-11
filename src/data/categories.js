@@ -188,7 +188,3 @@ export const categories = [
 export function getCategoryBySlug(slug) {
   return categories.find(c => c.slug === slug) || null;
 }
-
-export function getCategorySlugs() {
-  return categories.map(c => c.slug);
-}

@@ -1,6 +1,6 @@
 ﻿import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Search, Menu, X, LayoutGrid, Info, Bookmark } from 'lucide-react';
+import { Search, Menu, X, Home, LayoutGrid, Info, Bookmark } from 'lucide-react';
 import articles from '../data/articles';
 
 export default function Header() {

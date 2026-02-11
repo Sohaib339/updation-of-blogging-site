@@ -26,8 +26,6 @@ const ICON_MAP = {
   'photography': Camera,
 };
 
-export default ICON_MAP;
-
 export function getCategoryIcon(slug) {
   return ICON_MAP[slug] || Globe;
 }

@@ -150,17 +150,17 @@ export default function ArticlePage() {
         <h2 className="font-bold text-lg text-slate-900 mb-6">Comments ({articleComments.length})</h2>
 
         {/* Comment form */}
-        <form onSubmit={handleSubmitComment} className="flex gap-3 mb-8">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 flex items-center justify-center shrink-0">
+        <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 mb-8">
+          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 flex items-center justify-center shrink-0 hidden sm:flex">
             <span className="text-white text-xs font-bold">Y</span>
           </div>
-          <div className="flex-1 flex gap-2">
+          <div className="flex-1 flex gap-2 min-w-0">
             <input
               type="text"
               value={commentText}
               onChange={e => setCommentText(e.target.value)}
               placeholder="Add a comment..."
-              className="flex-1 bg-slate-50 border border-slate-200 rounded-full px-4 py-2.5 text-sm text-slate-700 placeholder-slate-400 outline-none focus:ring-2 focus:ring-violet-100 focus:border-violet-300 transition-all"
+              className="flex-1 min-w-0 bg-slate-50 border border-slate-200 rounded-full px-4 py-2.5 text-sm text-slate-700 placeholder-slate-400 outline-none focus:ring-2 focus:ring-violet-100 focus:border-violet-300 transition-all"
             />
             <button
               type="submit"

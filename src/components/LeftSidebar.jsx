@@ -34,7 +34,6 @@ export default function LeftSidebar() {
       const sidebarH = sidebarRef.current.scrollHeight;
       const viewportH = window.innerHeight;
       if (sidebarH > viewportH) {
-        // Negative top so sidebar scrolls with page until its bottom hits viewport bottom
         setTopOffset(viewportH - sidebarH);
       } else {
         setTopOffset(0);
@@ -45,10 +44,14 @@ export default function LeftSidebar() {
     return () => window.removeEventListener('resize', calculate);
   }, []);
 
+  const [hovered, setHovered] = useState(false);
+
   return (
     <aside
       ref={sidebarRef}
-      style={{ top: `${topOffset}px` }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{ top: hovered ? `${topOffset}px` : '0px', maxHeight: hovered ? 'none' : '100vh', overflowY: hovered ? 'visible' : 'hidden', transition: 'top 0.3s ease' }}
       className="hidden lg:flex flex-col w-64 border-r border-slate-100 sticky self-start bg-white shrink-0 z-40"
     >
       <div className="px-5 pt-6 pb-2">

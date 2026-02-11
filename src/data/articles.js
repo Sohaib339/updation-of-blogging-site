@@ -25,16 +25,10 @@ const CATEGORY_KEYWORDS = {
   'photography': 'camera,photography'
 };
 
-const THEMES = ['ocean', 'sunset', 'forest', 'lavender', 'midnight', 'gold'];
-
 function getImageUrl(category, index, w = 1200, h = 630) {
   const keywords = CATEGORY_KEYWORDS[category] || 'technology';
   const seed = index + 1;
   return `https://picsum.photos/seed/${keywords.split(',')[0]}${seed}/${w}/${h}`;
-}
-
-function getThumbnail(category, index) {
-  return getImageUrl(category, index, 800, 450);
 }
 
 // All articles matching the repo's content
@@ -104,9 +98,8 @@ const articles = [
   { id: 63, title: "Open Educational Resources: Free Knowledge at Scale", category: "education", date: "2026-01-07", readingTime: "5 min", excerpt: "OER adoption is reshaping higher education economics. MIT OpenCourseWare, Khan Academy, and new AI-powered platforms are making quality education universally accessible.", keywords: ["oer", "open-education", "free-courses"] }
 ];
 
-// Assign themes cyclically, images from Picsum, and generate slugs
+// Generate slugs and images
 const processedArticles = articles.map((article, index) => {
-  const theme = THEMES[index % THEMES.length];
   const slug = article.title
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, '')
@@ -117,9 +110,7 @@ const processedArticles = articles.map((article, index) => {
   return {
     ...article,
     slug,
-    theme,
     image: getImageUrl(article.category, index),
-    thumbnail: getThumbnail(article.category, index),
     author: "LetsBlogItUp Team",
     publishedAt: `${article.date}T06:54:25.417Z`,
   };
