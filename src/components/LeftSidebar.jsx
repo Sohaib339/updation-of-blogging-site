@@ -1,4 +1,4 @@
-﻿import { useRef, useState, useEffect } from 'react';
+﻿import { useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Home, LayoutGrid, Info, Bookmark } from 'lucide-react';
 import { categories } from '../data/categories';
@@ -26,33 +26,15 @@ export default function LeftSidebar() {
   const location = useLocation();
   const path = location.pathname;
   const sidebarRef = useRef(null);
-  const [topOffset, setTopOffset] = useState(0);
-
-  useEffect(() => {
-    const calculate = () => {
-      if (!sidebarRef.current) return;
-      const sidebarH = sidebarRef.current.scrollHeight;
-      const viewportH = window.innerHeight;
-      if (sidebarH > viewportH) {
-        setTopOffset(viewportH - sidebarH);
-      } else {
-        setTopOffset(0);
-      }
-    };
-    calculate();
-    window.addEventListener('resize', calculate);
-    return () => window.removeEventListener('resize', calculate);
-  }, []);
-
   const [hovered, setHovered] = useState(false);
 
   return (
     <aside
       ref={sidebarRef}
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{ top: hovered ? `${topOffset}px` : '0px', maxHeight: hovered ? 'none' : '100vh', overflowY: hovered ? 'visible' : 'hidden', transition: 'top 0.3s ease' }}
-      className="hidden lg:flex flex-col w-64 border-r border-slate-100 sticky self-start bg-white shrink-0 z-40"
+      onMouseLeave={() => { setHovered(false); if (sidebarRef.current) sidebarRef.current.scrollTop = 0; }}
+      className={`hidden lg:flex flex-col w-64 border-r border-slate-100 sticky top-0 self-start bg-white shrink-0 z-40 h-screen ${hovered ? 'overflow-y-auto' : 'overflow-y-hidden'}`}
+      style={{ scrollbarWidth: 'thin', scrollbarColor: '#e2e8f0 transparent' }}
     >
       <div className="px-5 pt-6 pb-2">
         <Link to="/" className="flex items-center gap-3 mb-8 px-1">
