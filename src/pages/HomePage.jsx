@@ -40,9 +40,9 @@ export default function HomePage() {
       {/* Hero */}
       <div className="border-b border-slate-100">
         <div className="main-content py-10 lg:py-14">
-          <div className="flex flex-col md:flex-row gap-8 lg:gap-10 items-center">
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-12 xl:gap-16 items-center justify-between">
             {/* Left: Text + stats */}
-            <div className="flex-1 min-w-0 space-y-5">
+            <div className="flex-1 min-w-0 space-y-5 max-w-2xl">
               <div className="flex items-center gap-2 text-[11px] font-bold tracking-widest text-fuchsia-600 uppercase bg-fuchsia-50 px-3 py-1.5 rounded-full w-fit border border-fuchsia-100/60">
                 <Star className="w-3 h-3 fill-current" />
                 Featured Story
@@ -54,7 +54,7 @@ export default function HomePage() {
                 <br className="hidden md:block" />
                 Daily by AI
               </h1>
-              <p className="text-[15px] text-slate-600 leading-relaxed max-w-lg">
+              <p className="text-[15px] text-slate-600 leading-relaxed">
                 Our mission is simple: deliver high quality, engaging content that informs, inspires, and empowers our readers to stay ahead in an ever changing world.
               </p>
 
@@ -99,7 +99,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: Larger image */}
-            <div className="w-full md:w-[340px] shrink-0" style={{ maxWidth: 'clamp(380px, 34vw, 560px)' }}>
+            <div className="w-full md:w-auto shrink-0" style={{ width: 'clamp(300px, 30vw, 480px)' }}>
               <Link to={`/articles/${featured.slug}`} className="relative group cursor-pointer block">
                 <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-fuchsia-600 rounded-2xl transform rotate-2 translate-x-2 translate-y-2 opacity-15 group-hover:rotate-3 group-hover:translate-x-3 group-hover:translate-y-3 transition-all duration-500"></div>
                 <img src={featured.image} alt={featured.title} className="relative w-full aspect-[4/5] object-cover rounded-2xl shadow-lg transition-transform duration-500 group-hover:-translate-y-1 border border-slate-100" />

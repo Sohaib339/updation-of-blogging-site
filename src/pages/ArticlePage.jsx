@@ -124,7 +124,7 @@ export default function ArticlePage() {
 
         {/* Comment form */}
         <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 mb-8">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 flex items-center justify-center shrink-0 hidden sm:flex">
+          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 hidden sm:flex items-center justify-center shrink-0">
             <span className="text-white text-xs font-bold">Y</span>
           </div>
           <div className="flex-1 flex gap-2 min-w-0">
