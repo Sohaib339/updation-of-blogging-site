@@ -17,7 +17,7 @@ function NavItem({ to, icon, label, active }) {
       <div className={active ? 'text-violet-600' : 'text-slate-400 group-hover:text-violet-500 transition-colors'}>
         {icon}
       </div>
-      <span className="text-sm tracking-wide">{label}</span>
+      <span className="text-base tracking-wide">{label}</span>
     </Link>
   );
 }
