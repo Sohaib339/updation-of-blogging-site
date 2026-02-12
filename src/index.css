@@ -46,6 +46,19 @@ img { max-width: 100%; height: auto; display: block; }
 .article-body img { width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); margin: 2rem 0; }
 .article-body a { color: #8b5cf6; text-decoration: underline; text-underline-offset: 4px; }
 
+/* === Category Card Cursor Glow === */
+.category-card {
+  --mx: 50%;
+  --my: 50%;
+  --card-opacity: 0;
+}
+.category-card:hover {
+  --card-opacity: 1;
+  border-color: transparent;
+  box-shadow: 0 8px 32px rgba(139, 92, 246, 0.15), 0 2px 8px rgba(236, 72, 153, 0.1);
+  transform: translateY(-2px);
+}
+
 /* === Layout Spacing === */
 @layer components {
   .main-content {
