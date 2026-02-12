@@ -1,4 +1,5 @@
 ﻿import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowUp } from 'lucide-react';
 import LeftSidebar from './LeftSidebar';
 import Header from './Header';
@@ -27,11 +28,26 @@ function ScrollToTopButton() {
 
 export default function Layout({ children }) {
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans flex">
+    <div className="min-h-screen bg-white text-slate-900 font-sans w-full flex">
       <LeftSidebar />
       <div className="flex-1 flex flex-col min-w-0 overflow-x-hidden">
         <Header />
-        <main className="overflow-x-hidden">{children}</main>
+        <main className="flex-1 overflow-x-hidden">{children}</main>
+        {/* Footer */}
+        <footer className="border-t border-slate-100 bg-slate-50/40 py-6">
+          <div className="main-content">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-medium text-slate-500">
+                <Link to="/about" className="hover:text-violet-600 transition-colors">About</Link>
+                <a href="https://amanah-capitals.tech" target="_blank" rel="noopener noreferrer" className="hover:text-violet-600 transition-colors">Amanah Capitals</a>
+                <Link to="/privacy" className="hover:text-violet-600 transition-colors">Privacy</Link>
+                <Link to="/terms" className="hover:text-violet-600 transition-colors">Terms</Link>
+                <Link to="/ai-policy" className="hover:text-violet-600 transition-colors">AI Policy</Link>
+              </div>
+              <p className="text-[11px] text-slate-400">© {new Date().getFullYear()} LetsBlogItUp · Powered by Amanah Capitals</p>
+            </div>
+          </div>
+        </footer>
       </div>
       <ScrollToTopButton />
     </div>

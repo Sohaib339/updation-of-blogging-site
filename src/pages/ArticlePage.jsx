@@ -84,40 +84,11 @@ export default function ArticlePage() {
       </span>
 
       {/* Title */}
-      <h1 className="text-2xl md:text-[32px] font-serif font-black text-slate-900 leading-tight mb-6">
+      <h1 className="font-serif font-black text-slate-900 leading-tight mb-6" style={{ fontSize: 'clamp(1.5rem, 1.2rem + 1.5vw, 2rem)' }}>
         {article.title}
       </h1>
 
-      {/* Author row */}
-      <div className="flex items-center gap-4 mb-8 pb-6 border-b border-slate-100">
-        <div className="w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-violet-500 via-fuchsia-500 to-orange-400 shrink-0">
-          <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-            <span className="text-sm font-bold text-violet-600">LB</span>
-          </div>
-        </div>
-        <div className="flex-1 min-w-0">
-          <p className="font-bold text-slate-900 text-sm">{article.author}</p>
-          <p className="text-xs text-slate-500">{formatDate(article.date)} · {article.readingTime}</p>
-        </div>
-      </div>
 
-      {/* Action Bar */}
-      <div className="flex items-center justify-between py-3 mb-8 border-b border-slate-100">
-        <div className="flex items-center gap-4">
-          <button onClick={() => toggleLike(slug)} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-200 ${likeCount > 0 ? 'bg-rose-50 text-rose-500' : 'text-slate-500 hover:bg-rose-50 hover:text-rose-500'}`}>
-            <Heart className={`w-5 h-5 ${likeCount > 0 ? 'fill-rose-500 text-rose-500' : ''}`} />
-            <span className="text-sm font-semibold">{likeCount || ''}</span>
-          </button>
-          <a href="#comments" className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-200 ${articleComments.length > 0 ? 'bg-sky-50 text-sky-500' : 'text-slate-500 hover:bg-sky-50 hover:text-sky-500'}`}>
-            <MessageCircle className={`w-5 h-5 ${articleComments.length > 0 ? 'fill-sky-100' : ''}`} />
-            <span className="text-sm font-semibold">{articleComments.length || ''}</span>
-          </a>
-        </div>
-        <button onClick={() => toggleSave(slug)} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-200 ${savedState ? 'bg-violet-50 text-violet-600' : 'text-slate-500 hover:bg-violet-50 hover:text-violet-600'}`}>
-          {savedState ? <BookmarkCheck className="w-5 h-5 fill-violet-600" /> : <Bookmark className="w-5 h-5" />}
-          <span className="text-sm font-semibold">{savedState ? 'Saved' : 'Save'}</span>
-        </button>
-      </div>
 
       {/* Hero Image */}
       {article.image && (

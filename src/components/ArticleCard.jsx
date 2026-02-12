@@ -21,11 +21,7 @@ export default function ArticleCard({ article }) {
         {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2.5 mb-2.5">
-            <div className="w-6 h-6 rounded-full p-[1.5px] bg-gradient-to-tr from-violet-500 via-fuchsia-500 to-orange-400 shrink-0">
-              <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                <span className="text-[8px] font-bold text-violet-600">LB</span>
-              </div>
-            </div>
+            <img src={`${import.meta.env.BASE_URL}logo.png`} alt="LB" className="w-6 h-6 rounded-full shrink-0" />
             <span className="text-[13px] font-medium text-slate-600">{author}</span>
           </div>
 
@@ -79,7 +75,7 @@ export default function ArticleCard({ article }) {
             <img src={image} alt={title} loading="lazy" className="w-28 h-28 md:w-32 md:h-28 object-cover rounded-xl" />
           ) : (
             <div className="w-28 h-28 md:w-32 md:h-28 bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-xl flex items-center justify-center">
-              <span className="text-violet-300 font-serif font-bold text-xl">LB</span>
+              <img src={`${import.meta.env.BASE_URL}logo.png`} alt="LB" className="w-12 h-12 rounded-full" />
             </div>
           )}
         </Link>

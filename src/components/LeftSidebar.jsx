@@ -33,8 +33,8 @@ export default function LeftSidebar() {
       ref={sidebarRef}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => { setHovered(false); if (sidebarRef.current) sidebarRef.current.scrollTop = 0; }}
-      className={`hidden lg:flex flex-col w-64 border-r border-slate-100 sticky top-0 self-start bg-white shrink-0 z-40 h-screen ${hovered ? 'overflow-y-auto' : 'overflow-y-hidden'}`}
-      style={{ scrollbarWidth: 'thin', scrollbarColor: '#e2e8f0 transparent' }}
+      className={`hidden lg:flex flex-col border-r border-slate-100 sticky top-0 self-start bg-white z-40 h-screen ${hovered ? 'overflow-y-auto' : 'overflow-y-hidden'}`}
+      style={{ flex: '0 0 clamp(240px, 18vw, 320px)', scrollbarWidth: 'thin', scrollbarColor: '#e2e8f0 transparent' }}
     >
       <div className="px-5 pt-6 pb-2">
         <Link to="/" className="flex items-center gap-3 mb-8 px-1">

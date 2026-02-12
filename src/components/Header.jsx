@@ -2,6 +2,8 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { Search, Menu, X, Home, LayoutGrid, Info, Bookmark } from 'lucide-react';
 import articles from '../data/articles';
+import { categories } from '../data/categories';
+import { getCategoryIcon } from '../data/categoryIcons';
 
 export default function Header() {
   const [query, setQuery] = useState('');
@@ -72,7 +74,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-slate-100 bg-white px-4 py-4 space-y-1">
+        <div className="lg:hidden border-t border-slate-100 bg-white px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
           <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-violet-50 hover:text-violet-700 transition-colors">
             <Home size={20} /> <span className="font-medium">Home</span>
           </Link>
@@ -85,6 +87,22 @@ export default function Header() {
           <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-violet-50 hover:text-violet-700 transition-colors">
             <Info size={20} /> <span className="font-medium">About</span>
           </Link>
+
+          {/* What We Cover */}
+          <div className="pt-3 mt-3 border-t border-slate-100">
+            <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 px-4">What We Cover</h3>
+            <div className="space-y-1">
+              {categories.map((cat) => {
+                const Icon = getCategoryIcon(cat.slug);
+                return (
+                  <Link key={cat.slug} to={`/categories/${cat.slug}`} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-600 hover:bg-violet-50 hover:text-violet-700 transition-colors">
+                    <Icon size={16} className="text-slate-400" />
+                    <span className="text-sm font-medium">{cat.name}</span>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
         </div>
       )}
     </header>

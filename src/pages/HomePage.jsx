@@ -47,7 +47,7 @@ export default function HomePage() {
                 <Star className="w-3 h-3 fill-current" />
                 Featured Story
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif font-black text-slate-900 leading-[1.12]">
+              <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] font-serif font-black text-slate-900" style={{ lineHeight: 1.12 }}>
                 Fresh Ideas,{' '}
                 <br className="hidden md:block" />
                 Delivered{' '}
@@ -86,11 +86,7 @@ export default function HomePage() {
               {/* Author + CTA */}
               <div className="flex items-center gap-4 pt-1">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full p-[2px] bg-gradient-to-tr from-violet-500 via-fuchsia-500 to-orange-400">
-                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                      <span className="text-xs font-bold text-violet-600">LB</span>
-                    </div>
-                  </div>
+                  <img src={`${import.meta.env.BASE_URL}logo.png`} alt="LB" className="w-10 h-10 rounded-full" />
                   <div>
                     <p className="text-sm font-semibold text-slate-900">LetsBlogItUp AI</p>
                     <p className="text-xs text-slate-400">{formatDate(featured.date)} · {featured.readingTime}</p>
@@ -103,7 +99,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: Larger image */}
-            <div className="w-full md:w-[340px] lg:w-[400px] shrink-0">
+            <div className="w-full md:w-[340px] shrink-0" style={{ maxWidth: 'clamp(380px, 34vw, 560px)' }}>
               <Link to={`/articles/${featured.slug}`} className="relative group cursor-pointer block">
                 <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-fuchsia-600 rounded-2xl transform rotate-2 translate-x-2 translate-y-2 opacity-15 group-hover:rotate-3 group-hover:translate-x-3 group-hover:translate-y-3 transition-all duration-500"></div>
                 <img src={featured.image} alt={featured.title} className="relative w-full aspect-[4/5] object-cover rounded-2xl shadow-lg transition-transform duration-500 group-hover:-translate-y-1 border border-slate-100" />
@@ -164,8 +160,8 @@ export default function HomePage() {
                 We build cutting-edge technology solutions that help businesses thrive in the digital age.
               </p>
               <a href="https://amanah-capitals.tech" target="_blank" rel="noopener noreferrer"
-                className="inline-block bg-white rounded-full shadow-lg hover:shadow-xl text-sm font-bold px-8 py-3 transition-all hover:bg-blue-50" style={{ color: '#2563eb' }}>
-                Visit Amanah Capitals
+                className="inline-block bg-white rounded-full shadow-lg hover:shadow-xl text-sm font-bold px-8 py-3 transition-all hover:bg-violet-50"
+                style={{ color: '#7c3aed' }}>                Visit Amanah Capitals
               </a>
             </div>
           </div>

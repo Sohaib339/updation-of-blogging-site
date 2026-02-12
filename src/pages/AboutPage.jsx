@@ -8,7 +8,7 @@ export default function AboutPage() {
       {/* Hero */}
       <div className="text-center mb-16">
         <div className="w-16 h-16 mx-auto bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-200 mb-6">
-          <span className="text-white font-serif font-black text-2xl">LB</span>
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="LB" className="w-10 h-10 rounded-lg" />
         </div>
         <h1 className="text-3xl md:text-4xl font-serif font-black text-slate-900 mb-4">About LetsBlogItUp</h1>
         <p className="text-xl text-slate-500 font-light max-w-xl mx-auto">High-quality, AI-assisted content that informs, inspires, and empowers.</p>
@@ -52,7 +52,8 @@ export default function AboutPage() {
           <h3 className="font-serif font-black text-2xl mb-4">Powered by Amanah Capitals</h3>
           <p className="text-slate-300 font-light leading-relaxed mb-8">Our parent company supports this platform and several other tech initiatives focused on ethical finance, open-source development, and building tools that empower creators worldwide.</p>
           <a href="https://amanah-capitals.tech" target="_blank" rel="noopener noreferrer"
-            className="inline-block bg-white text-slate-900 hover:bg-violet-50 font-bold px-8 py-3 rounded-full transition-all shadow-lg hover:shadow-xl">
+            className="inline-block bg-white hover:bg-violet-50 font-bold px-8 py-3 rounded-full transition-all shadow-lg hover:shadow-xl"
+            style={{ color: '#7c3aed' }}>
             Visit Amanah Capitals
           </a>
         </div>
