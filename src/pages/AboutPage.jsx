@@ -4,7 +4,7 @@ import articles from '../data/articles';
 
 export default function AboutPage() {
   return (
-    <div className="main-content py-8 md:py-12 max-w-4xl mx-auto">
+    <div className="main-content py-8 md:py-12 max-w-5xl mx-auto">
       {/* Hero */}
       <div className="text-center mb-16">
         <div className="w-16 h-16 mx-auto bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-200 mb-6">
@@ -25,7 +25,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-16">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
         <div className="text-center p-6 bg-violet-50 rounded-2xl">
           <div className="text-3xl font-black text-violet-600 mb-1">{articles.length}</div>
           <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Articles</div>

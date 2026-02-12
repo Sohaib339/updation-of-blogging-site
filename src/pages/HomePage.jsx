@@ -59,7 +59,7 @@ export default function HomePage() {
               </p>
 
               {/* Stats row */}
-              <div className="flex items-center gap-4 pt-2">
+              <div className="flex items-center flex-wrap gap-3 sm:gap-4 pt-2">
                 <div className="flex items-center gap-2 bg-violet-50 border border-violet-100 rounded-xl px-3.5 py-2">
                   <TrendingUp className="w-4 h-4 text-violet-500" />
                   <div>
@@ -84,7 +84,7 @@ export default function HomePage() {
               </div>
 
               {/* Author + CTA */}
-              <div className="flex items-center gap-4 pt-1">
+              <div className="flex items-center flex-wrap gap-4 pt-1">
                 <div className="flex items-center gap-3">
                   <img src={`${import.meta.env.BASE_URL}logo.png`} alt="LB" className="w-10 h-10 rounded-full" />
                   <div>

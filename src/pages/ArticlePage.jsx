@@ -43,7 +43,7 @@ export default function ArticlePage() {
 
   if (!article) {
     return (
-      <div className="main-content py-20 text-center max-w-4xl mx-auto">
+      <div className="main-content py-20 text-center max-w-5xl mx-auto">
         <h1 className="text-3xl font-serif font-bold text-slate-900 mb-4">Article Not Found</h1>
         <p className="text-slate-500 mb-8">The article you are looking for does not exist.</p>
         <Link to="/" className="px-6 py-3 bg-violet-600 text-white rounded-full font-bold hover:bg-violet-700 transition-colors inline-block">
@@ -68,7 +68,7 @@ export default function ArticlePage() {
   }
 
   return (
-    <div className="main-content py-8 md:py-12 max-w-5xl mx-auto">
+    <div className="main-content py-8 md:py-12 max-w-6xl mx-auto">
       {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8 flex-wrap">
         <Link to="/" className="hover:text-violet-600 transition-colors">Home</Link>
@@ -100,19 +100,21 @@ export default function ArticlePage() {
 
       {/* Bottom Action Bar */}
       <div className="flex items-center justify-between py-4 mt-10 mb-6 border-t border-b border-slate-100">
-        <div className="flex items-center gap-4">
-          <button onClick={() => toggleLike(slug)} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-200 ${likeCount > 0 ? 'bg-rose-50 text-rose-500' : 'text-slate-500 hover:bg-rose-50 hover:text-rose-500'}`}>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <button onClick={() => toggleLike(slug)} className={`flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-full transition-all duration-200 ${likeCount > 0 ? 'bg-rose-50 text-rose-500' : 'text-slate-500 hover:bg-rose-50 hover:text-rose-500'}`}>
             <Heart className={`w-5 h-5 ${likeCount > 0 ? 'fill-rose-500 text-rose-500' : ''}`} />
-            <span className="text-sm font-semibold">{likeCount > 0 ? `${likeCount} likes` : 'Like'}</span>
+            <span className="text-sm font-semibold hidden sm:inline">{likeCount > 0 ? `${likeCount} likes` : 'Like'}</span>
+            {likeCount > 0 && <span className="text-sm font-semibold sm:hidden">{likeCount}</span>}
           </button>
-          <a href="#comments" className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-200 ${articleComments.length > 0 ? 'bg-sky-50 text-sky-500' : 'text-slate-500 hover:bg-sky-50 hover:text-sky-500'}`}>
+          <a href="#comments" className={`flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-full transition-all duration-200 ${articleComments.length > 0 ? 'bg-sky-50 text-sky-500' : 'text-slate-500 hover:bg-sky-50 hover:text-sky-500'}`}>
             <MessageCircle className={`w-5 h-5 ${articleComments.length > 0 ? 'fill-sky-100' : ''}`} />
-            <span className="text-sm font-semibold">{articleComments.length > 0 ? `${articleComments.length} comments` : 'Comment'}</span>
+            <span className="text-sm font-semibold hidden sm:inline">{articleComments.length > 0 ? `${articleComments.length} comments` : 'Comment'}</span>
+            {articleComments.length > 0 && <span className="text-sm font-semibold sm:hidden">{articleComments.length}</span>}
           </a>
         </div>
-        <button onClick={() => toggleSave(slug)} className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full transition-all duration-200 ${savedState ? 'bg-violet-50 text-violet-600' : 'text-slate-500 hover:bg-violet-50 hover:text-violet-600'}`}>
+        <button onClick={() => toggleSave(slug)} className={`flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-full transition-all duration-200 ${savedState ? 'bg-violet-50 text-violet-600' : 'text-slate-500 hover:bg-violet-50 hover:text-violet-600'}`}>
           {savedState ? <BookmarkCheck className="w-5 h-5 fill-violet-600" /> : <Bookmark className="w-5 h-5" />}
-          <span className="text-sm font-semibold">{savedState ? 'Saved' : 'Save'}</span>
+          <span className="text-sm font-semibold hidden sm:inline">{savedState ? 'Saved' : 'Save'}</span>
         </button>
       </div>
 
