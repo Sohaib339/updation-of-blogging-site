@@ -3,7 +3,7 @@ import { Bot } from 'lucide-react';
 
 export default function AIPolicyPage() {
   return (
-    <div className="main-content py-8 md:py-12 max-w-3xl mx-auto">
+    <div className="main-content py-8 md:py-12 max-w-4xl mx-auto">
       <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8">
         <Link to="/" className="hover:text-violet-600 transition-colors">Home</Link>
         <span>/</span>

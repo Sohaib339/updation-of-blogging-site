@@ -43,7 +43,7 @@ export default function ArticlePage() {
 
   if (!article) {
     return (
-      <div className="main-content py-20 text-center max-w-3xl mx-auto">
+      <div className="main-content py-20 text-center max-w-4xl mx-auto">
         <h1 className="text-3xl font-serif font-bold text-slate-900 mb-4">Article Not Found</h1>
         <p className="text-slate-500 mb-8">The article you are looking for does not exist.</p>
         <Link to="/" className="px-6 py-3 bg-violet-600 text-white rounded-full font-bold hover:bg-violet-700 transition-colors inline-block">
@@ -68,7 +68,7 @@ export default function ArticlePage() {
   }
 
   return (
-    <div className="main-content py-8 md:py-12 max-w-3xl mx-auto">
+    <div className="main-content py-8 md:py-12 max-w-5xl mx-auto">
       {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8 flex-wrap">
         <Link to="/" className="hover:text-violet-600 transition-colors">Home</Link>
@@ -84,7 +84,7 @@ export default function ArticlePage() {
       </span>
 
       {/* Title */}
-      <h1 className="font-serif font-black text-slate-900 leading-tight mb-6" style={{ fontSize: 'clamp(1.5rem, 1.2rem + 1.5vw, 2rem)' }}>
+      <h1 className="font-serif font-black text-slate-900 leading-tight mb-6" style={{ fontSize: 'clamp(1.5rem, 1rem + 2vw, 2.5rem)' }}>
         {article.title}
       </h1>
 

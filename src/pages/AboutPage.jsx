@@ -4,7 +4,7 @@ import articles from '../data/articles';
 
 export default function AboutPage() {
   return (
-    <div className="main-content py-8 md:py-12 max-w-3xl mx-auto">
+    <div className="main-content py-8 md:py-12 max-w-4xl mx-auto">
       {/* Hero */}
       <div className="text-center mb-16">
         <div className="w-16 h-16 mx-auto bg-gradient-to-br from-violet-600 to-fuchsia-600 rounded-2xl flex items-center justify-center shadow-lg shadow-violet-200 mb-6">

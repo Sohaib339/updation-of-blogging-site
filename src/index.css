@@ -35,9 +35,9 @@ img { max-width: 100%; height: auto; display: block; }
 .animate-marquee:hover { animation-play-state: paused; }
 
 /* === Article Body Prose === */
-.article-body { font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem); line-height: 1.9; color: #475569; }
-.article-body h2 { font-size: 1.5rem; font-weight: 700; color: #0f172a; margin: 2.5rem 0 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid #f1f5f9; font-family: var(--font-serif); }
-.article-body h3 { font-size: 1.25rem; font-weight: 600; color: #0f172a; margin: 2rem 0 0.75rem; }
+.article-body { font-size: clamp(1rem, 0.9rem + 0.35vw, 1.25rem); line-height: 1.85; color: #475569; }
+.article-body h2 { font-size: clamp(1.375rem, 1.1rem + 0.5vw, 1.75rem); font-weight: 700; color: #0f172a; margin: 2.5rem 0 1rem; padding-bottom: 0.75rem; border-bottom: 2px solid #f1f5f9; font-family: var(--font-serif); }
+.article-body h3 { font-size: clamp(1.125rem, 1rem + 0.3vw, 1.5rem); font-weight: 600; color: #0f172a; margin: 2rem 0 0.75rem; }
 .article-body p { margin-bottom: 1.5rem; }
 .article-body ul, .article-body ol { margin: 1rem 0 1.5rem; padding-left: 1.5rem; }
 .article-body li { margin-bottom: 0.5rem; }
