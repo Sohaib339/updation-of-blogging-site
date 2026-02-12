@@ -1,5 +1,5 @@
 ﻿import { Link } from 'react-router-dom';
-import { Star, Globe } from 'lucide-react';
+import { Star, Globe, TrendingUp, Users, Zap, ArrowRight } from 'lucide-react';
 import ArticleCard from '../components/ArticleCard';
 import articles from '../data/articles';
 import { categories } from '../data/categories';
@@ -40,7 +40,8 @@ export default function HomePage() {
       {/* Hero */}
       <div className="border-b border-slate-100">
         <div className="main-content py-10 lg:py-14">
-          <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-center">
+          <div className="flex flex-col md:flex-row gap-8 lg:gap-10 items-center">
+            {/* Left: Text + stats */}
             <div className="flex-1 min-w-0 space-y-5">
               <div className="flex items-center gap-2 text-[11px] font-bold tracking-widest text-fuchsia-600 uppercase bg-fuchsia-50 px-3 py-1.5 rounded-full w-fit border border-fuchsia-100/60">
                 <Star className="w-3 h-3 fill-current" />
@@ -56,19 +57,53 @@ export default function HomePage() {
               <p className="text-[15px] text-slate-500 leading-relaxed max-w-lg">
                 Our mission is simple: deliver high quality, engaging content that informs, inspires, and empowers our readers to stay ahead in an ever changing world.
               </p>
-              <div className="flex items-center gap-3 pt-1">
-                <div className="w-10 h-10 rounded-full p-[2px] bg-gradient-to-tr from-violet-500 via-fuchsia-500 to-orange-400">
-                  <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                    <span className="text-xs font-bold text-violet-600">LB</span>
+
+              {/* Stats row */}
+              <div className="flex items-center gap-4 pt-2">
+                <div className="flex items-center gap-2 bg-violet-50 border border-violet-100 rounded-xl px-3.5 py-2">
+                  <TrendingUp className="w-4 h-4 text-violet-500" />
+                  <div>
+                    <p className="text-sm font-bold text-slate-900">63+</p>
+                    <p className="text-[10px] text-slate-500">Articles</p>
                   </div>
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-slate-900">LetsBlogItUp AI</p>
-                  <p className="text-xs text-slate-400">{formatDate(featured.date)} · {featured.readingTime}</p>
+                <div className="flex items-center gap-2 bg-fuchsia-50 border border-fuchsia-100 rounded-xl px-3.5 py-2">
+                  <Users className="w-4 h-4 text-fuchsia-500" />
+                  <div>
+                    <p className="text-sm font-bold text-slate-900">23</p>
+                    <p className="text-[10px] text-slate-500">Categories</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 bg-amber-50 border border-amber-100 rounded-xl px-3.5 py-2">
+                  <Zap className="w-4 h-4 text-amber-500" />
+                  <div>
+                    <p className="text-sm font-bold text-slate-900">Daily</p>
+                    <p className="text-[10px] text-slate-500">Updates</p>
+                  </div>
                 </div>
               </div>
+
+              {/* Author + CTA */}
+              <div className="flex items-center gap-4 pt-1">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full p-[2px] bg-gradient-to-tr from-violet-500 via-fuchsia-500 to-orange-400">
+                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                      <span className="text-xs font-bold text-violet-600">LB</span>
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-900">LetsBlogItUp AI</p>
+                    <p className="text-xs text-slate-400">{formatDate(featured.date)} · {featured.readingTime}</p>
+                  </div>
+                </div>
+                <Link to={`/articles/${featured.slug}`} className="ml-auto flex items-center gap-1.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-xs font-bold px-4 py-2.5 rounded-full hover:shadow-lg hover:shadow-violet-200 transition-all duration-300 hover:-translate-y-0.5">
+                  Read Article <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
             </div>
-            <div className="w-full md:w-[280px] lg:w-[320px] shrink-0">
+
+            {/* Right: Larger image */}
+            <div className="w-full md:w-[340px] lg:w-[400px] shrink-0">
               <Link to={`/articles/${featured.slug}`} className="relative group cursor-pointer block">
                 <div className="absolute inset-0 bg-gradient-to-tr from-violet-600 to-fuchsia-600 rounded-2xl transform rotate-2 translate-x-2 translate-y-2 opacity-15 group-hover:rotate-3 group-hover:translate-x-3 group-hover:translate-y-3 transition-all duration-500"></div>
                 <img src={featured.image} alt={featured.title} className="relative w-full aspect-[4/5] object-cover rounded-2xl shadow-lg transition-transform duration-500 group-hover:-translate-y-1 border border-slate-100" />
