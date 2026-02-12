@@ -62,7 +62,7 @@ export default function Header() {
                     {a.title}
                   </button>
                 )) : (
-                  <div className="px-5 py-3 text-sm text-slate-400">No results found</div>
+                  <div className="px-5 py-3 text-sm text-slate-600">No results found</div>
                 )}
               </div>
             )}
@@ -90,7 +90,7 @@ export default function Header() {
 
           {/* What We Cover */}
           <div className="pt-3 mt-3 border-t border-slate-100">
-            <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 px-4">What We Cover</h3>
+            <h3 className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-3 px-4">What We Cover</h3>
             <div className="space-y-1">
               {categories.map((cat) => {
                 const Icon = getCategoryIcon(cat.slug);

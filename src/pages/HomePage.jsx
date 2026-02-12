@@ -18,7 +18,7 @@ function InfiniteTicker() {
         {[...categories, ...categories].map((cat, i) => {
           const Icon = getCategoryIcon(cat.slug);
           return (
-            <Link key={i} to={`/categories/${cat.slug}`} className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-slate-100 text-slate-500 whitespace-nowrap hover:border-violet-200 hover:text-violet-600 transition-all duration-200 cursor-pointer mx-1.5">
+            <Link key={i} to={`/categories/${cat.slug}`} className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow-sm border border-slate-100 text-slate-600 whitespace-nowrap hover:border-violet-200 hover:text-violet-600 transition-all duration-200 cursor-pointer mx-1.5">
               <Icon size={14} className="text-violet-400" />
               <span className="text-[11px] font-semibold uppercase tracking-wider">{cat.name}</span>
             </Link>
@@ -54,7 +54,7 @@ export default function HomePage() {
                 <br className="hidden md:block" />
                 Daily by AI
               </h1>
-              <p className="text-[15px] text-slate-500 leading-relaxed max-w-lg">
+              <p className="text-[15px] text-slate-600 leading-relaxed max-w-lg">
                 Our mission is simple: deliver high quality, engaging content that informs, inspires, and empowers our readers to stay ahead in an ever changing world.
               </p>
 
@@ -64,21 +64,21 @@ export default function HomePage() {
                   <TrendingUp className="w-4 h-4 text-violet-500" />
                   <div>
                     <p className="text-sm font-bold text-slate-900">63+</p>
-                    <p className="text-[10px] text-slate-500">Articles</p>
+                    <p className="text-[10px] text-slate-600">Articles</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 bg-fuchsia-50 border border-fuchsia-100 rounded-xl px-3.5 py-2">
                   <Users className="w-4 h-4 text-fuchsia-500" />
                   <div>
                     <p className="text-sm font-bold text-slate-900">23</p>
-                    <p className="text-[10px] text-slate-500">Categories</p>
+                    <p className="text-[10px] text-slate-600">Categories</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2 bg-amber-50 border border-amber-100 rounded-xl px-3.5 py-2">
                   <Zap className="w-4 h-4 text-amber-500" />
                   <div>
                     <p className="text-sm font-bold text-slate-900">Daily</p>
-                    <p className="text-[10px] text-slate-500">Updates</p>
+                    <p className="text-[10px] text-slate-600">Updates</p>
                   </div>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function HomePage() {
                   <img src={`${import.meta.env.BASE_URL}logo.png`} alt="LB" className="w-10 h-10 rounded-full" />
                   <div>
                     <p className="text-sm font-semibold text-slate-900">LetsBlogItUp AI</p>
-                    <p className="text-xs text-slate-400">{formatDate(featured.date)} · {featured.readingTime}</p>
+                    <p className="text-xs text-slate-600">{formatDate(featured.date)} · {featured.readingTime}</p>
                   </div>
                 </div>
                 <Link to={`/articles/${featured.slug}`} className="ml-auto flex items-center gap-1.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white text-xs font-bold px-4 py-2.5 rounded-full hover:shadow-lg hover:shadow-violet-200 transition-all duration-300 hover:-translate-y-0.5">
@@ -136,10 +136,10 @@ export default function HomePage() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1">
                       <div className="w-5 h-5 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 ring-2 ring-white shadow-sm shrink-0"></div>
-                      <span className="text-xs font-medium text-slate-500 truncate">{article.author}</span>
+                      <span className="text-xs font-medium text-slate-600 truncate">{article.author}</span>
                     </div>
                     <h4 className="font-bold text-slate-900 text-sm leading-snug group-hover:text-violet-700 transition-colors line-clamp-2">{article.title}</h4>
-                    <span className="text-[11px] text-slate-400 mt-1 inline-block">{article.readingTime}</span>
+                    <span className="text-[11px] text-slate-600 mt-1 inline-block">{article.readingTime}</span>
                   </div>
                 </Link>
               ))}

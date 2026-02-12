@@ -35,7 +35,7 @@ export default function ArticleCard({ article }) {
           </Link>
 
           <div className="flex items-center justify-between mt-3">
-            <div className="flex items-center gap-3 text-xs text-slate-400">
+            <div className="flex items-center gap-3 text-xs text-slate-600">
               <span className="font-semibold text-violet-600 bg-violet-50 px-2.5 py-0.5 rounded-full text-[11px]">{catLabel}</span>
               <span>{formatDate(date)}</span>
               <span className="hidden sm:inline">·</span>

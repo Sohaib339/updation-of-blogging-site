@@ -45,7 +45,7 @@ export default function ArticlePage() {
     return (
       <div className="main-content py-20 text-center max-w-5xl mx-auto">
         <h1 className="text-3xl font-serif font-bold text-slate-900 mb-4">Article Not Found</h1>
-        <p className="text-slate-500 mb-8">The article you are looking for does not exist.</p>
+        <p className="text-slate-600 mb-8">The article you are looking for does not exist.</p>
         <Link to="/" className="px-6 py-3 bg-violet-600 text-white rounded-full font-bold hover:bg-violet-700 transition-colors inline-block">
           Back to Home
         </Link>
@@ -70,12 +70,12 @@ export default function ArticlePage() {
   return (
     <div className="main-content py-8 md:py-12 max-w-6xl mx-auto">
       {/* Breadcrumbs */}
-      <nav className="flex items-center gap-2 text-sm text-slate-400 mb-8 flex-wrap">
+      <nav className="flex items-center gap-2 text-sm text-slate-600 mb-8 flex-wrap">
         <Link to="/" className="hover:text-violet-600 transition-colors">Home</Link>
         <span>/</span>
         <Link to={`/categories/${article.category}`} className="hover:text-violet-600 transition-colors">{catLabel}</Link>
         <span>/</span>
-        <span className="text-slate-300 truncate max-w-[200px]">{article.title}</span>
+        <span className="text-slate-500 truncate max-w-[200px]">{article.title}</span>
       </nav>
 
       {/* Tag */}
@@ -156,7 +156,7 @@ export default function ArticlePage() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <span className="text-sm font-bold text-slate-900">{c.author}</span>
-                    <span className="text-xs text-slate-400">{new Date(c.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
+                    <span className="text-xs text-slate-600">{new Date(c.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
                   </div>
                   <p className="text-sm text-slate-600 leading-relaxed">{c.text}</p>
                 </div>
@@ -171,7 +171,7 @@ export default function ArticlePage() {
             ))}
           </div>
         ) : (
-          <p className="text-sm text-slate-400 text-center py-6">No comments yet. Be the first to share your thoughts!</p>
+          <p className="text-sm text-slate-600 text-center py-6">No comments yet. Be the first to share your thoughts!</p>
         )}
       </section>
 
@@ -187,7 +187,7 @@ export default function ArticlePage() {
                 )}
                 <div className="min-w-0">
                   <h3 className="font-bold text-sm text-slate-900 group-hover:text-violet-700 transition-colors mb-1 line-clamp-2">{ra.title}</h3>
-                  <p className="text-xs text-slate-500">{formatDate(ra.date)} · {ra.readingTime}</p>
+                  <p className="text-xs text-slate-600">{formatDate(ra.date)} · {ra.readingTime}</p>
                 </div>
               </Link>
             ))}

@@ -57,8 +57,8 @@ function CategoryCard({ cat, colorIndex }) {
           {(() => { const Icon = getCategoryIcon(cat.slug); return <Icon size={20} />; })()}
         </div>
         <h3 className="font-bold text-slate-900 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-violet-700 group-hover:to-fuchsia-600 transition-colors duration-300 mb-1">{cat.name}</h3>
-        <p className="text-sm text-slate-500 line-clamp-2 mb-3 font-light group-hover:text-slate-600 transition-colors duration-300">{cat.description}</p>
-        <span className="text-xs font-bold text-slate-400 group-hover:text-violet-500 transition-colors duration-300">{getArticlesByCategory(cat.slug).length} article{getArticlesByCategory(cat.slug).length !== 1 ? 's' : ''}</span>
+        <p className="text-sm text-slate-600 line-clamp-2 mb-3 font-light group-hover:text-slate-700 transition-colors duration-300">{cat.description}</p>
+        <span className="text-xs font-bold text-slate-600 group-hover:text-violet-500 transition-colors duration-300">{getArticlesByCategory(cat.slug).length} article{getArticlesByCategory(cat.slug).length !== 1 ? 's' : ''}</span>
       </div>
     </Link>
   );
@@ -68,7 +68,7 @@ export default function CategoriesPage() {
   return (
     <div className="main-content py-8 md:py-12">
       <h1 className="text-3xl md:text-4xl font-serif font-black text-slate-900 mb-2">All Categories</h1>
-      <p className="text-lg text-slate-500 mb-10 font-light">Explore {categories.length} topics across technology, science, and beyond.</p>
+      <p className="text-lg text-slate-600 mb-10 font-light">Explore {categories.length} topics across technology, science, and beyond.</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {categories.map((cat, i) => (

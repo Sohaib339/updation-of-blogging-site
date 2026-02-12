@@ -15,7 +15,7 @@ export default function SavedPage() {
         <Bookmark className="w-6 h-6 text-violet-600" />
         <h1 className="text-2xl md:text-3xl font-serif font-black text-slate-900">Saved Articles</h1>
       </div>
-      <p className="text-slate-500 font-light mb-8">Your bookmarked articles for later reading.</p>
+      <p className="text-slate-600 font-light mb-8">Your bookmarked articles for later reading.</p>
 
       {savedArticles.length > 0 ? (
         <div>
@@ -29,7 +29,7 @@ export default function SavedPage() {
             <Bookmark className="w-7 h-7 text-slate-400" />
           </div>
           <h2 className="text-lg font-bold text-slate-900 mb-2">No saved articles yet</h2>
-          <p className="text-slate-500 text-sm mb-6">Click the bookmark icon on any article to save it here.</p>
+          <p className="text-slate-600 text-sm mb-6">Click the bookmark icon on any article to save it here.</p>
           <Link to="/" className="px-6 py-2.5 bg-violet-600 text-white rounded-full font-medium hover:bg-violet-700 transition-colors inline-block text-sm">
             Browse Articles
           </Link>

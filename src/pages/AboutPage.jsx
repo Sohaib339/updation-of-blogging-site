@@ -11,7 +11,7 @@ export default function AboutPage() {
           <img src={`${import.meta.env.BASE_URL}logo.png`} alt="LB" className="w-10 h-10 rounded-lg" />
         </div>
         <h1 className="text-3xl md:text-4xl font-serif font-black text-slate-900 mb-4">About LetsBlogItUp</h1>
-        <p className="text-xl text-slate-500 font-light max-w-xl mx-auto">High-quality, AI-assisted content that informs, inspires, and empowers.</p>
+        <p className="text-xl text-slate-600 font-light max-w-xl mx-auto">High-quality, AI-assisted content that informs, inspires, and empowers.</p>
       </div>
 
       {/* Story */}
@@ -28,15 +28,15 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
         <div className="text-center p-6 bg-violet-50 rounded-2xl">
           <div className="text-3xl font-black text-violet-600 mb-1">{articles.length}</div>
-          <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Articles</div>
+          <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Articles</div>
         </div>
         <div className="text-center p-6 bg-fuchsia-50 rounded-2xl">
           <div className="text-3xl font-black text-fuchsia-600 mb-1">{categories.length}</div>
-          <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Categories</div>
+          <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Categories</div>
         </div>
         <div className="text-center p-6 bg-orange-50 rounded-2xl">
           <div className="text-3xl font-black text-orange-600 mb-1">Daily</div>
-          <div className="text-xs font-bold text-slate-500 uppercase tracking-wider">Updates</div>
+          <div className="text-xs font-bold text-slate-600 uppercase tracking-wider">Updates</div>
         </div>
       </div>
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
       {/* Contact */}
       <section className="text-center pb-10">
         <h2 className="text-2xl font-serif font-bold text-slate-900 mb-4">Get in Touch</h2>
-        <p className="text-slate-500 font-light text-lg mb-2">Have a question or suggestion?</p>
+        <p className="text-slate-600 font-light text-lg mb-2">Have a question or suggestion?</p>
         <a href="mailto:hello@letsblogitup.dev" className="text-violet-600 font-medium hover:underline">hello@letsblogitup.dev</a>
       </section>
     </div>
