@@ -57,7 +57,7 @@ export default function LeftSidebar() {
       <div className="mx-5 my-4 border-t border-slate-100"></div>
 
       <div className="px-5 py-2">
-        <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-4 px-1">What We Cover</h3>
+        <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 px-1">What We Cover</h3>
         <div className="space-y-3.5">
           {categories.map((cat) => {
             const Icon = getCategoryIcon(cat.slug);
@@ -67,10 +67,10 @@ export default function LeftSidebar() {
                   <Icon size={16} />
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-sm font-bold text-slate-700 group-hover:text-violet-700 transition-colors mb-0.5 leading-tight">
+                  <h4 className="text-[15px] font-bold text-slate-700 group-hover:text-violet-700 transition-colors mb-0.5 leading-snug">
                     {cat.name}
                   </h4>
-                  <p className="text-[10px] text-slate-400 leading-tight group-hover:text-slate-500 transition-colors line-clamp-2">
+                  <p className="text-[13px] text-slate-400 leading-snug group-hover:text-slate-500 transition-colors line-clamp-2">
                     {cat.description}
                   </p>
                 </div>
