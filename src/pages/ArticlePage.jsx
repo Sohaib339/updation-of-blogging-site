@@ -120,10 +120,10 @@ export default function ArticlePage() {
 
       {/* Comments Section */}
       <section id="comments" className="mt-8 scroll-mt-20">
-        <h2 className="font-bold text-lg text-slate-900 mb-6">Comments ({articleComments.length})</h2>
+        <h2 className="font-bold text-lg text-slate-900 mb-4">Comments ({articleComments.length})</h2>
 
         {/* Comment form */}
-        <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 mb-4 max-w-2xl">
+        <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 mb-3 max-w-md">
           <div className="w-9 h-9 rounded-full bg-slate-400 hidden sm:flex items-center justify-center shrink-0">
             <span className="text-white text-xs font-bold">Y</span>
           </div>
@@ -170,14 +170,12 @@ export default function ArticlePage() {
               </div>
             ))}
           </div>
-        ) : (
-          <p className="text-sm text-slate-600 text-center py-2">No comments yet. Be the first to share your thoughts!</p>
-        )}
+        ) : null}
       </section>
 
       {/* Related */}
       {related.length > 0 && (
-        <div className="mt-14 pt-10 border-t border-slate-100">
+        <div className="mt-8 pt-6 border-t border-slate-100">
           <h2 className="font-serif font-bold text-xl text-slate-900 mb-6">Related Articles</h2>
           <div className="space-y-4">
             {related.map(ra => (
