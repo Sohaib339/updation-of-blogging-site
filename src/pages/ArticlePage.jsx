@@ -123,7 +123,7 @@ export default function ArticlePage() {
         <h2 className="font-bold text-lg text-slate-900 mb-6">Comments ({articleComments.length})</h2>
 
         {/* Comment form */}
-        <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 mb-8">
+        <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 mb-4 max-w-2xl">
           <div className="w-9 h-9 rounded-full bg-slate-400 hidden sm:flex items-center justify-center shrink-0">
             <span className="text-white text-xs font-bold">Y</span>
           </div>
@@ -171,7 +171,7 @@ export default function ArticlePage() {
             ))}
           </div>
         ) : (
-          <p className="text-sm text-slate-600 text-center py-6">No comments yet. Be the first to share your thoughts!</p>
+          <p className="text-sm text-slate-600 text-center py-2">No comments yet. Be the first to share your thoughts!</p>
         )}
       </section>
 
