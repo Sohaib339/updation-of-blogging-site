@@ -43,8 +43,8 @@ export default function Header() {
 
         {/* Desktop Actions */}
         <div className="flex items-center gap-4 md:gap-6">
-          <div className="hidden md:flex items-center bg-slate-50 hover:bg-slate-100 rounded-full px-5 py-2.5 w-72 focus-within:ring-2 focus-within:ring-violet-100 focus-within:bg-white transition-all group relative">
-            <Search className="w-4 h-4 text-slate-400 group-focus-within:text-violet-500 mr-3 transition-colors" />
+          <div className="hidden md:flex items-center bg-slate-50 hover:bg-slate-100 rounded-full px-5 py-2.5 w-72 focus-within:ring-2 focus-within:ring-blue-100 focus-within:bg-white transition-all group relative">
+            <Search className="w-4 h-4 text-slate-400 group-focus-within:text-blue-500 mr-3 transition-colors" />
             <input
               type="text"
               placeholder="Search AI, Tech, Science..."
@@ -58,7 +58,7 @@ export default function Header() {
               <div className="absolute top-full left-0 right-0 mt-2 bg-white border border-slate-200 rounded-2xl shadow-xl z-50 max-h-80 overflow-y-auto">
                 {results.length > 0 ? results.map(a => (
                   <button key={a.slug} onClick={() => selectResult(a.slug)}
-                    className="w-full text-left px-5 py-3 hover:bg-violet-50 text-sm text-slate-700 border-b border-slate-50 last:border-0 transition-colors">
+                    className="w-full text-left px-5 py-3 hover:bg-blue-50 text-sm text-slate-700 border-b border-slate-50 last:border-0 transition-colors">
                     {a.title}
                   </button>
                 )) : (
@@ -75,16 +75,16 @@ export default function Header() {
       {/* Mobile Menu */}
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-slate-100 bg-white px-4 py-4 space-y-1 max-h-[80vh] overflow-y-auto">
-          <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-violet-50 hover:text-violet-700 transition-colors">
+          <Link to="/" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
             <Home size={20} /> <span className="font-medium">Home</span>
           </Link>
-          <Link to="/categories" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-violet-50 hover:text-violet-700 transition-colors">
+          <Link to="/categories" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
             <LayoutGrid size={20} /> <span className="font-medium">Categories</span>
           </Link>
-          <Link to="/saved" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-violet-50 hover:text-violet-700 transition-colors">
+          <Link to="/saved" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
             <Bookmark size={20} /> <span className="font-medium">Saved</span>
           </Link>
-          <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-violet-50 hover:text-violet-700 transition-colors">
+          <Link to="/about" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-blue-50 hover:text-blue-700 transition-colors">
             <Info size={20} /> <span className="font-medium">About</span>
           </Link>
 
@@ -95,7 +95,7 @@ export default function Header() {
               {categories.map((cat) => {
                 const Icon = getCategoryIcon(cat.slug);
                 return (
-                  <Link key={cat.slug} to={`/categories/${cat.slug}`} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-600 hover:bg-violet-50 hover:text-violet-700 transition-colors">
+                  <Link key={cat.slug} to={`/categories/${cat.slug}`} onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-3 px-4 py-2.5 rounded-xl text-slate-600 hover:bg-blue-50 hover:text-blue-700 transition-colors">
                     <Icon size={16} className="text-slate-400" />
                     <span className="text-sm font-medium">{cat.name}</span>
                   </Link>

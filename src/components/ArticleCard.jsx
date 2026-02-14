@@ -26,7 +26,7 @@ export default function ArticleCard({ article }) {
           </div>
 
           <Link to={`/articles/${slug}`} className="group block">
-            <h2 className="text-base md:text-lg font-bold text-slate-900 leading-snug mb-1 group-hover:text-violet-700 transition-colors line-clamp-2">
+            <h2 className="text-base md:text-lg font-bold text-slate-900 leading-snug mb-1 group-hover:text-blue-700 transition-colors line-clamp-2">
               {title}
             </h2>
             <p className="article-excerpt hidden md:block">
@@ -36,7 +36,7 @@ export default function ArticleCard({ article }) {
 
           <div className="flex items-center justify-between mt-3">
             <div className="flex items-center gap-3 text-xs text-slate-600">
-              <span className="font-semibold text-violet-600 bg-violet-50 px-2.5 py-0.5 rounded-full text-[11px]">{catLabel}</span>
+              <span className="font-semibold text-blue-600 bg-blue-50 px-2.5 py-0.5 rounded-full text-[11px]">{catLabel}</span>
               <span>{formatDate(date)}</span>
               <span className="hidden sm:inline">·</span>
               <span className="hidden sm:inline">{readingTime}</span>
@@ -60,10 +60,10 @@ export default function ArticleCard({ article }) {
               </Link>
               <button
                 onClick={(e) => { e.preventDefault(); toggleSave(slug); }}
-                className={`px-2.5 py-1.5 rounded-full transition-all duration-200 ${savedState ? 'bg-violet-50 text-violet-600' : 'text-slate-400 hover:bg-violet-50 hover:text-violet-600'}`}
+                className={`px-2.5 py-1.5 rounded-full transition-all duration-200 ${savedState ? 'bg-blue-50 text-blue-600' : 'text-slate-400 hover:bg-blue-50 hover:text-blue-600'}`}
                 title={savedState ? 'Saved' : 'Save'}
               >
-                {savedState ? <BookmarkCheck className="w-4 h-4 fill-violet-600" /> : <Bookmark className="w-4 h-4" />}
+                {savedState ? <BookmarkCheck className="w-4 h-4 fill-blue-600" /> : <Bookmark className="w-4 h-4" />}
               </button>
             </div>
           </div>
@@ -74,7 +74,7 @@ export default function ArticleCard({ article }) {
           {image ? (
             <img src={image} alt={title} loading="lazy" className="w-28 h-28 md:w-32 md:h-28 object-cover rounded-xl" />
           ) : (
-            <div className="w-28 h-28 md:w-32 md:h-28 bg-gradient-to-br from-violet-50 to-fuchsia-50 rounded-xl flex items-center justify-center">
+            <div className="w-28 h-28 md:w-32 md:h-28 bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl flex items-center justify-center">
               <img src={`${import.meta.env.BASE_URL}logo.png`} alt="LB" className="w-12 h-12 rounded-full" />
             </div>
           )}

@@ -46,7 +46,7 @@ export default function ArticlePage() {
       <div className="main-content py-20 text-center max-w-5xl mx-auto">
         <h1 className="text-3xl font-serif font-bold text-slate-900 mb-4">Article Not Found</h1>
         <p className="text-slate-600 mb-8">The article you are looking for does not exist.</p>
-        <Link to="/" className="px-6 py-3 bg-violet-600 text-white rounded-full font-bold hover:bg-violet-700 transition-colors inline-block">
+        <Link to="/" className="px-6 py-3 bg-slate-800 text-white rounded-full font-bold hover:bg-slate-700 transition-colors inline-block">
           Back to Home
         </Link>
       </div>
@@ -71,15 +71,15 @@ export default function ArticlePage() {
     <div className="main-content py-8 md:py-12 max-w-6xl mx-auto">
       {/* Breadcrumbs */}
       <nav className="flex items-center gap-2 text-sm text-slate-600 mb-8 flex-wrap">
-        <Link to="/" className="hover:text-violet-600 transition-colors">Home</Link>
+        <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
         <span>/</span>
-        <Link to={`/categories/${article.category}`} className="hover:text-violet-600 transition-colors">{catLabel}</Link>
+        <Link to={`/categories/${article.category}`} className="hover:text-blue-600 transition-colors">{catLabel}</Link>
         <span>/</span>
         <span className="text-slate-500 truncate max-w-[200px]">{article.title}</span>
       </nav>
 
       {/* Tag */}
-      <span className="text-xs font-bold text-violet-600 bg-violet-50 px-3 py-1 rounded-full border border-violet-100 uppercase tracking-wider inline-block mb-5">
+      <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100 uppercase tracking-wider inline-block mb-5">
         {catLabel}
       </span>
 
@@ -112,8 +112,8 @@ export default function ArticlePage() {
             {articleComments.length > 0 && <span className="text-sm font-semibold sm:hidden">{articleComments.length}</span>}
           </a>
         </div>
-        <button onClick={() => toggleSave(slug)} className={`flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-full transition-all duration-200 ${savedState ? 'bg-violet-50 text-violet-600' : 'text-slate-500 hover:bg-violet-50 hover:text-violet-600'}`}>
-          {savedState ? <BookmarkCheck className="w-5 h-5 fill-violet-600" /> : <Bookmark className="w-5 h-5" />}
+          <button onClick={() => toggleSave(slug)} className={`flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1.5 rounded-full transition-all duration-200 ${savedState ? 'bg-blue-50 text-blue-600' : 'text-slate-500 hover:bg-blue-50 hover:text-blue-600'}`}>
+          {savedState ? <BookmarkCheck className="w-5 h-5 fill-blue-600" /> : <Bookmark className="w-5 h-5" />}
           <span className="text-sm font-semibold hidden sm:inline">{savedState ? 'Saved' : 'Save'}</span>
         </button>
       </div>
@@ -124,7 +124,7 @@ export default function ArticlePage() {
 
         {/* Comment form */}
         <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 mb-8">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 hidden sm:flex items-center justify-center shrink-0">
+          <div className="w-9 h-9 rounded-full bg-slate-400 hidden sm:flex items-center justify-center shrink-0">
             <span className="text-white text-xs font-bold">Y</span>
           </div>
           <div className="flex-1 flex gap-2 min-w-0">
@@ -133,12 +133,12 @@ export default function ArticlePage() {
               value={commentText}
               onChange={e => setCommentText(e.target.value)}
               placeholder="Add a comment..."
-              className="flex-1 min-w-0 bg-slate-50 border border-slate-200 rounded-full px-4 py-2.5 text-sm text-slate-700 placeholder-slate-400 outline-none focus:ring-2 focus:ring-violet-100 focus:border-violet-300 transition-all"
+              className="flex-1 min-w-0 bg-slate-50 border border-slate-200 rounded-full px-4 py-2.5 text-sm text-slate-700 placeholder-slate-400 outline-none focus:ring-2 focus:ring-blue-100 focus:border-blue-300 transition-all"
             />
             <button
               type="submit"
               disabled={!commentText.trim()}
-              className="p-2.5 rounded-full bg-violet-600 text-white hover:bg-violet-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors shrink-0"
+              className="p-2.5 rounded-full bg-slate-800 text-white hover:bg-slate-700 disabled:opacity-30 disabled:cursor-not-allowed transition-colors shrink-0"
             >
               <Send className="w-4 h-4" />
             </button>
@@ -150,7 +150,7 @@ export default function ArticlePage() {
           <div className="space-y-5">
             {articleComments.map(c => (
               <div key={c.id} className="flex gap-3 group">
-                <div className="w-8 h-8 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-8 h-8 rounded-full bg-slate-400 flex items-center justify-center shrink-0 mt-0.5">
                   <span className="text-white text-xs font-bold">{c.author[0]}</span>
                 </div>
                 <div className="flex-1 min-w-0">
@@ -186,7 +186,7 @@ export default function ArticlePage() {
                   <img src={ra.image} alt={ra.title} className="w-20 h-16 object-cover rounded-md shrink-0" />
                 )}
                 <div className="min-w-0">
-                  <h3 className="font-bold text-sm text-slate-900 group-hover:text-violet-700 transition-colors mb-1 line-clamp-2">{ra.title}</h3>
+                  <h3 className="font-bold text-sm text-slate-900 group-hover:text-blue-700 transition-colors mb-1 line-clamp-2">{ra.title}</h3>
                   <p className="text-xs text-slate-600">{formatDate(ra.date)} · {ra.readingTime}</p>
                 </div>
               </Link>

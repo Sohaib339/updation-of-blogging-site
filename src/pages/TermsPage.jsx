@@ -4,7 +4,7 @@ export default function TermsPage() {
   return (
     <div className="main-content py-8 md:py-12 max-w-5xl mx-auto">
       <nav className="flex items-center gap-2 text-sm text-slate-600 mb-8">
-        <Link to="/" className="hover:text-violet-600 transition-colors">Home</Link>
+        <Link to="/" className="hover:text-blue-600 transition-colors">Home</Link>
         <span>/</span>
         <span className="text-slate-900 font-medium">Terms of Service</span>
       </nav>
@@ -33,7 +33,7 @@ export default function TermsPage() {
         </section>
         <section>
           <h2 className="text-xl font-serif font-bold text-slate-900 mb-3">6. Contact</h2>
-          <p>For questions about these terms, contact us at <a href="mailto:hello@letsblogitup.dev" className="text-violet-600 hover:underline">hello@letsblogitup.dev</a>.</p>
+          <p>For questions about these terms, contact us at <a href="mailto:hello@letsblogitup.dev" className="text-blue-600 hover:underline">hello@letsblogitup.dev</a>.</p>
         </section>
       </div>
     </div>

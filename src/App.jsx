@@ -9,7 +9,6 @@ import CategoryPage from './pages/CategoryPage';
 import AboutPage from './pages/AboutPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
-import AIPolicyPage from './pages/AIPolicyPage';
 import SavedPage from './pages/SavedPage';
 
 function ScrollToTop() {
@@ -41,7 +40,6 @@ export default function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/privacy" element={<PrivacyPage />} />
             <Route path="/terms" element={<TermsPage />} />
-            <Route path="/ai-policy" element={<AIPolicyPage />} />
             <Route path="/saved" element={<SavedPage />} />
           </Routes>
         </Layout>
