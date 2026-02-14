@@ -39,19 +39,15 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <div className="border-b border-slate-100">
-        <div className="main-content py-8 lg:py-10">
+        <div className="main-content py-4 lg:py-5">
           <div className="flex flex-col md:flex-row gap-6 lg:gap-10 items-center justify-between">
             {/* Left: Text + stats */}
             <div className="flex-1 min-w-0 space-y-4">
               <div className="text-[11px] font-bold tracking-widest text-slate-500 uppercase">
                 Featured Story
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-[2.75rem] xl:text-5xl font-serif font-black text-slate-900" style={{ lineHeight: 1.12 }}>
-                Fresh Ideas,{' '}
-                <br className="hidden md:block" />
-                Delivered{' '}
-                <br className="hidden md:block" />
-                Daily by AI
+              <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] xl:text-6xl font-serif font-black text-slate-900" style={{ lineHeight: 1.1 }}>
+                Fresh Ideas, Delivered Daily by AI
               </h1>
               <p className="text-[15px] lg:text-base xl:text-lg text-slate-600 leading-relaxed max-w-2xl">
                 Our mission is simple: deliver high quality, engaging content that informs, inspires, and empowers our readers to stay ahead in an ever changing world.
