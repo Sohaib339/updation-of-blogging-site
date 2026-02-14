@@ -75,7 +75,7 @@ export default function HomePage() {
                     <p className="text-xs text-slate-600">{formatDate(featured.date)} · {featured.readingTime}</p>
                   </div>
                 </div>
-                <Link to={`/articles/${featured.slug}`} className="ml-auto flex items-center gap-1.5 bg-slate-900 text-white text-xs font-bold px-4 py-2.5 rounded-full hover:bg-slate-800 transition-all duration-300">
+                <Link to={`/articles/${featured.slug}`} className="ml-auto flex items-center gap-1.5 bg-slate-900 text-xs font-bold px-4 py-2.5 rounded-full hover:bg-slate-800 transition-all duration-300" style={{ color: '#ffffff' }}>
                   Read Article <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
