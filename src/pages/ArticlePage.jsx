@@ -119,11 +119,11 @@ export default function ArticlePage() {
       </div>
 
       {/* Comments Section */}
-      <section id="comments" className="mt-8 scroll-mt-20">
-        <h2 className="font-bold text-lg text-slate-900 mb-4">Comments ({articleComments.length})</h2>
+      <section id="comments" className="mt-4 scroll-mt-20">
+        <h2 className="font-bold text-lg text-slate-900 mb-3">Comments ({articleComments.length})</h2>
 
         {/* Comment form */}
-        <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 mb-3 max-w-md">
+        <form onSubmit={handleSubmitComment} className="flex gap-2 sm:gap-3 max-w-md">
           <div className="w-9 h-9 rounded-full bg-slate-400 hidden sm:flex items-center justify-center shrink-0">
             <span className="text-white text-xs font-bold">Y</span>
           </div>

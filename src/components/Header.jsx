@@ -43,7 +43,7 @@ export default function Header() {
 
         {/* Desktop Actions */}
         <div className="flex items-center gap-4 md:gap-6">
-          <div className="hidden md:flex items-center bg-slate-50 hover:bg-slate-100 rounded-full px-5 py-2.5 w-72 focus-within:ring-2 focus-within:ring-blue-100 focus-within:bg-white transition-all group relative">
+          <div className="hidden md:flex items-center bg-white border border-slate-300 hover:border-slate-400 rounded-full px-5 py-2.5 w-80 focus-within:ring-2 focus-within:ring-blue-200 focus-within:border-blue-400 shadow-sm transition-all group relative">
             <Search className="w-4 h-4 text-slate-400 group-focus-within:text-blue-500 mr-3 transition-colors" />
             <input
               type="text"
